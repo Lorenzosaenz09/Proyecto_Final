@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import 'dotenv/config';
 import usuarioRouter from './Routes/usuarioRouter.js';
 
 const app = express();
@@ -25,5 +26,6 @@ app.use(unknownEndpoint);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => { console.log(`Local en http://localhost:${PORT}`);});
+
 
 export default app;

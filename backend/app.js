@@ -2,12 +2,14 @@ import express from 'express';
 import cors from 'cors';
 import 'dotenv/config';
 import usuarioRouter from './Routes/usuarioRouter.js';
+import mascotaRouter from './Routes/mascotaRouter.js';
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 app.use("/usuario", usuarioRouter);
+app.use("/mascota", mascotaRouter);
 
 
 const unknownEndpoint = (request, response) => {

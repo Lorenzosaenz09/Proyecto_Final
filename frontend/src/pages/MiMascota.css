@@ -1,0 +1,268 @@
+.mimascota-content {
+    padding: 24px 32px;
+  }
+  
+  .mimascota-content h1 {
+    color: #1f3320;
+    margin-bottom: 20px;
+  }
+  
+  .mimascota-subtitle {
+    color: #6b7280;
+    margin-top: -6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .mimascota-section-title {
+    color: #1f3320;
+    font-size: 15px;
+    margin: 20px 0 12px;
+  }
+  
+  /* Modo edición */
+  .mimascota-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 32px;
+  }
+  
+  .mimascota-field label {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+  }
+  
+  .mimascota-input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+  
+  .mimascota-input-row input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+  }
+  
+  .mimascota-editar {
+    color: #3f8b4c;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+  
+  .mimascota-salud-box {
+    background: #e8f3ea;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1f3320;
+  }
+  
+  .mimascota-salud-box span {
+    color: #5b6b5c;
+    font-weight: 400;
+  }
+  
+  .mimascota-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #374151;
+  }
+  
+  .mimascota-form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+  }
+  
+  .mimascota-subir-btn {
+    background: white;
+    border: 1px dashed #9ca3af;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    color: #374151;
+    cursor: pointer;
+  }
+  
+  .mimascota-continuar-btn {
+    background: #3f8b4c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .mimascota-continuar-btn:disabled {
+    background: #a8c9ae;
+    cursor: not-allowed;
+  }
+  
+  /* Modo vista */
+  .mimascota-card {
+    display: flex;
+    gap: 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 28px;
+    max-width: 920px;
+  }
+  
+  .mimascota-card-foto img {
+    width: 340px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .mimascota-miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .mimascota-miniaturas img {
+    width: 60px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  
+  .mimascota-miniaturas img.activa {
+    opacity: 1;
+    outline: 2px solid #3f8b4c;
+  }
+  
+  .mimascota-card-info h2 {
+    color: #1f3320;
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+  
+  .mimascota-card-raza {
+    color: #6b7280;
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+  
+  .mimascota-card-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 15px;
+    color: #374151;
+    margin-bottom: 22px;
+  }
+  
+  .mimascota-card-info ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .mimascota-card-info ul li svg {
+    color: #1f2937;
+    flex-shrink: 0;
+  }
+  
+  .mimascota-simbolo {
+    font-weight: 700;
+    color: #1f2937;
+    width: 14px;
+    display: inline-flex;
+    justify-content: center;
+  }
+  
+  .mimascota-editar-btn {
+    background: #3f8b4c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 22px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .mimascota-fotos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .mimascota-foto-miniatura {
+    position: relative;
+    width: 90px;
+    height: 90px;
+  }
+  
+  .mimascota-foto-miniatura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .mimascota-foto-eliminar {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #1f2937;
+    color: white;
+    border: 2px solid white;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mimascota-foto-agregar {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    border: 1.5px dashed #9ca3af;
+    background: none;
+    color: #6b7280;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .mimascota-sin-foto {
+    width: 340px;
+    height: 260px;
+    border-radius: 12px;
+    background: #f3f4f6;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  .mimascota-aviso {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 12px;
+  }

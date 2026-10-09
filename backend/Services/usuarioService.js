@@ -14,4 +14,6 @@ export async function insertUsuario(nombre, apellido, mail, telefono, contraseñ
 export async function getUsuarioByMail(mail) { 
     return await pool.query( 
         "select id_usuario, contraseña from usuario where mail = $1", [mail] ) }
+
+
         

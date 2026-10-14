@@ -1,4 +1,4 @@
-import { insertMascota } from '../Services/mascotaService.js';
+import { insertMascota, getMascotas } from '../Services/mascotaService.js';
 
 export async function crearMascota(req, res) {
 
@@ -32,3 +32,15 @@ export async function crearMascota(req, res) {
         return res.status(500).json({message: err.message})
     }
 }   
+
+export async function obtenerMascotas(req, res) {
+    try {
+        const result = await getMascotas();
+
+        return res.status(200).json(result.rows);
+    }
+    catch (err) {
+        console.log("Error:", err);
+        return res.status(500).json({message: err.message});
+    }
+}

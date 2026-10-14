@@ -32,10 +32,16 @@ export async function crearMascota(req, res) {
         return res.status(500).json({message: err.message})
     }
 }   
-
 export async function obtenerMascotas(req, res) {
     try {
-        const result = await getMascotas();
+        const result = await getMascotas(
+            req.query.especie || null,
+            req.query.raza || null,
+            req.query.sexo || null,
+            req.query.tamaño || null,
+            req.query.ubicacion || null,
+            req.query.color || null
+        );
 
         return res.status(200).json(result.rows);
     }

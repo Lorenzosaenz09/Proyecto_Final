@@ -10,8 +10,16 @@ export async function insertMascota(nombre, especie, raza, sexo, nacimiento, tam
         [nombre, especie, raza, sexo, nacimiento, tamaño, color, ubicacion, id_usuario]
     )
 }
-export async function getMascotas() {
+
+export async function getMascotas(especie, raza, sexo, tamaño, ubicacion, color) {
     return await pool.query(
-        "select * from mascota"
+        `select * from mascota
+        where ($1::text is null or especie = $1)
+        and ($2::text is null or raza = $2)
+        and ($3::text is null or sexo = $3)
+        and ($4::text is null or tamaño = $4)
+        and ($5::text is null or ubicacion = $5)
+        and ($6::text is null or color = $6)`,
+        [especie, raza, sexo, tamaño, ubicacion, color]
     )
 }
